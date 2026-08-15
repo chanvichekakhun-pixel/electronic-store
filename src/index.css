@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-link {
+  position: relative;
+  padding-bottom: 5px;
+}
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #d32f2f;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #d32f2f;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card {
+  transition: transform 0.2s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.hero-gradient {
+  background: linear-gradient(to right, #001f3f, #002244);
+}
+
+input::placeholder {
+  color: #999;
+}
+
+/* Carousel */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+.carousel-slide {
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+}
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Hide scrollbar for horizontally-scrolling sections */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
